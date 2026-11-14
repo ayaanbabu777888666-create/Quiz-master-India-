@@ -17,24 +17,35 @@
 --muted:#a4c5b2;
 --border:#1c4633;
 }
+
 *{box-sizing:border-box}
+
 body{
 margin:0;
 background:var(--bg);
 color:var(--text);
 font-family:Arial,sans-serif;
 }
+
 button,input,textarea{font:inherit}
 button{cursor:pointer}
-.app{max-width:950px;margin:auto;padding:15px}
+
+.app{
+max-width:950px;
+margin:auto;
+padding:15px;
+}
+
 header{
 display:flex;
 align-items:center;
 gap:12px;
 padding:15px 0;
 }
+
 .logo{
-width:55px;height:55px;
+width:55px;
+height:55px;
 border-radius:17px;
 background:#123c29;
 display:grid;
@@ -42,16 +53,36 @@ place-items:center;
 font-size:30px;
 border:2px solid var(--light);
 }
-.brand h1{font-size:21px;margin:0}
-.brand p{font-size:11px;color:var(--light);letter-spacing:2px;margin:5px 0}
+
+.brand h1{
+font-size:21px;
+margin:0;
+}
+
+.brand p{
+font-size:11px;
+color:var(--light);
+letter-spacing:2px;
+margin:5px 0;
+}
+
 .hero{
 padding:25px;
 border-radius:23px;
 background:linear-gradient(135deg,#174b32,#0b2118);
 border:1px solid #326447;
 }
-.hero h2{font-size:30px;margin:10px 0}
-.hero p{color:#c2ddce;line-height:1.6}
+
+.hero h2{
+font-size:30px;
+margin:10px 0;
+}
+
+.hero p{
+color:#c2ddce;
+line-height:1.6;
+}
+
 .btn{
 border:0;
 padding:12px 17px;
@@ -61,17 +92,32 @@ color:#001b0e;
 font-weight:bold;
 margin:4px 2px;
 }
+
 .secondary{
 background:#173c2a;
 color:white;
 border:1px solid #326447;
 }
+
+.download-btn{
+display:inline-block;
+text-decoration:none;
+border:1px solid var(--light);
+padding:12px 17px;
+border-radius:12px;
+background:#d9ffe9;
+color:#064126;
+font-weight:bold;
+margin:8px 2px;
+}
+
 nav{
 display:flex;
 gap:8px;
 overflow:auto;
 margin:20px 0;
 }
+
 nav button{
 background:var(--card);
 color:var(--muted);
@@ -80,17 +126,21 @@ border-radius:25px;
 padding:11px 15px;
 white-space:nowrap;
 }
+
 nav button.active{
 background:#174b32;
 color:white;
 }
+
 .section{display:none}
 .section.active{display:block}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:12px;
 }
+
 .category{
 background:var(--card);
 border:1px solid var(--border);
@@ -99,8 +149,14 @@ padding:17px;
 color:white;
 text-align:left;
 }
-.category b{display:block;margin-top:10px}
+
+.category b{
+display:block;
+margin-top:10px;
+}
+
 .category small{color:var(--muted)}
+
 .card{
 background:var(--card);
 border:1px solid var(--border);
@@ -108,6 +164,7 @@ border-radius:17px;
 padding:17px;
 margin:12px 0;
 }
+
 .field{
 width:100%;
 padding:13px;
@@ -117,7 +174,9 @@ border-radius:11px;
 color:white;
 margin:8px 0;
 }
+
 textarea.field{min-height:100px}
+
 .option{
 width:100%;
 padding:14px;
@@ -128,9 +187,21 @@ border:1px solid #326447;
 color:white;
 text-align:left;
 }
-.correct{background:#145c35;border-color:#78f0b2}
-.wrong{background:#542323;border-color:#ff8888}
+
+.option:disabled{cursor:default}
+
+.correct{
+background:#145c35;
+border-color:#78f0b2;
+}
+
+.wrong{
+background:#542323;
+border-color:#ff8888;
+}
+
 .muted{color:var(--muted)}
+
 .tag{
 display:inline-block;
 padding:6px 10px;
@@ -139,6 +210,7 @@ border:1px solid #326447;
 color:var(--light);
 font-size:12px;
 }
+
 .progress{
 height:7px;
 background:#183526;
@@ -146,32 +218,30 @@ border-radius:20px;
 margin:15px 0;
 overflow:hidden;
 }
+
 .progress span{
 display:block;
 height:100%;
 background:var(--light);
 width:0;
 }
-.chatbox{
-height:320px;
-overflow-y:auto;
-display:flex;
-flex-direction:column;
-gap:9px;
-}
+
 .message{
 background:#102b20;
 padding:11px;
 border:1px solid #28543c;
 border-radius:12px;
 overflow-wrap:anywhere;
+margin:8px 0;
 }
+
 footer{
 text-align:center;
 padding:25px;
 color:#71917e;
 font-size:12px;
 }
+
 .notice{
 padding:12px;
 border-radius:12px;
@@ -180,6 +250,7 @@ color:#f8e8af;
 font-size:12px;
 line-height:1.5;
 }
+
 @media(min-width:650px){
 .grid{grid-template-columns:repeat(3,1fr)}
 }
@@ -187,10 +258,12 @@ line-height:1.5;
 </head>
 
 <body>
+
 <div class="app">
 
 <header>
 <div class="logo">👁️</div>
+
 <div class="brand">
 <h1>Quiz Master India</h1>
 <p>PLAY • THINK • LEARN</p>
@@ -198,87 +271,186 @@ line-height:1.5;
 </header>
 
 <section class="hero">
+
 <span class="tag">NO LOGIN REQUIRED</span>
+
 <h2>ज्ञान की चुनौती!</h2>
-<p>क्विज खेलें, सवाल पूछें और नए लोगों से बातचीत करें। बिना अकाउंट बनाए सीधे एंटर करें।</p>
-<button class="btn" onclick="showTab('quiz')">▶ Play Quiz</button>
-<button class="btn secondary" onclick="showTab('ask')">Ask Question</button>
+
+<p>
+क्विज खेलें, सवाल पूछें और अपना ज्ञान बढ़ाएँ।
+बिना अकाउंट बनाए सीधे एंटर करें।
+</p>
+
+<button class="btn" onclick="showTab('quiz')">
+▶ Play Quiz
+</button>
+
+<button class="btn secondary" onclick="showTab('ask')">
+Ask Question
+</button>
+
+<!-- WEBSITE ONLY DOWNLOAD BUTTON -->
+<a
+id="downloadAppButton"
+class="download-btn"
+href="#"
+onclick="downloadApp(event)">
+⬇ Download App
+</a>
+
 </section>
 
 <nav>
 <button class="active" onclick="showTab('home',this)">Home</button>
 <button onclick="showTab('quiz',this)">Quiz</button>
 <button onclick="showTab('ask',this)">Ask</button>
-<button onclick="showTab('chat',this)">Chat</button>
 <button onclick="showTab('saved',this)">My Questions</button>
 </nav>
 
 <section id="home" class="section active">
+
 <h2>Choose Quiz Category</h2>
+
 <div class="grid" id="categories"></div>
+
 <div class="notice">
-Guest mode: अकाउंट बनाने की जरूरत नहीं है।
+Guest Mode: अकाउंट बनाने की जरूरत नहीं है।
 </div>
+
 </section>
 
 <section id="quiz" class="section">
+
 <div class="card">
-<div class="tag" id="quizCategory">General Knowledge</div>
-<h2 id="questionText">क्विज शुरू करने के लिए कैटेगरी चुनें।</h2>
-<div class="progress"><span id="progressBar"></span></div>
+
+<div class="tag" id="quizCategory">
+General Knowledge
+</div>
+
+<h2 id="questionText">
+क्विज शुरू करने के लिए कैटेगरी चुनें।
+</h2>
+
+<div class="progress">
+<span id="progressBar"></span>
+</div>
+
 <div id="options"></div>
+
 <p id="feedback" class="muted"></p>
-<div class="muted" id="scoreText">Score: 0</div>
-<button class="btn" id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
+
+<div class="muted" id="scoreText">
+Score: 0
+</div>
+
+<button
+class="btn"
+id="nextBtn"
+onclick="nextQuestion()"
+disabled>
+Next Question
+</button>
+
 </div>
 </section>
 
 <section id="ask" class="section">
+
 <div class="card">
+
 <h2>Ask Anything</h2>
-<textarea id="userQuestion" class="field" maxlength="500" placeholder="अपना सवाल लिखें..."></textarea>
-<button class="btn" onclick="submitQuestion()">Submit Question</button>
-<p class="muted">सवाल इस डिवाइस में सेव होगा। AI जवाब की सुविधा अभी शामिल नहीं है।</p>
+
+<textarea
+id="userQuestion"
+class="field"
+maxlength="500"
+placeholder="अपना सवाल लिखें...">
+</textarea>
+
+<button class="btn" onclick="submitQuestion()">
+Submit Question
+</button>
+
+<p class="muted">
+आपका सवाल इस डिवाइस में सेव होगा।
+AI जवाब की सुविधा अभी शामिल नहीं है।
+</p>
+
 </div>
+
 <div class="card">
+
 <h3>Common Questions</h3>
+
 <div id="faq"></div>
-</div>
-</section>
 
-<section id="chat" class="section">
-<div class="card">
-<h2>💬 Public Guest Chat</h2>
-<input id="guestName" class="field" maxlength="24" placeholder="अपना नाम लिखें">
-<div class="tag" id="chatStatus">Firebase setup required</div>
 </div>
 
-<div class="card">
-<div id="chatMessages" class="chatbox">
-<p class="muted">Firebase जोड़ने के बाद चैट शुरू होगी।</p>
-</div>
-<input id="chatInput" class="field" maxlength="500" placeholder="Message लिखें...">
-<button class="btn" onclick="sendChatMessage()">Send Message</button>
-</div>
-
-<div class="notice">
-सार्वजनिक चैट में दूसरे लोग आपके मैसेज पढ़ सकते हैं। निजी जानकारी साझा न करें।
-</div>
 </section>
 
 <section id="saved" class="section">
+
 <div class="card">
+
 <h2>My Questions</h2>
+
 <div id="savedList"></div>
+
 </div>
+
 </section>
 
 <footer>
 Quiz Master India © 2026
 </footer>
+
 </div>
 
 <script>
+
+/* =================================
+   APP DOWNLOAD SETTINGS
+================================= */
+
+// यहाँ अपनी APK की असली डाउनलोड लिंक डालें।
+const APK_DOWNLOAD_URL = "PASTE_YOUR_APK_DOWNLOAD_LINK_HERE";
+
+// ऐप और वेबसाइट की पहचान।
+const params = new URLSearchParams(window.location.search);
+
+const isInstalledApp =
+params.get("app") === "1" ||
+window.matchMedia("(display-mode: standalone)").matches ||
+navigator.standalone === true ||
+window.AndroidApp === true ||
+/; wv\)/i.test(navigator.userAgent);
+
+// ऐप के अंदर Download बटन छिपाएँ।
+if(isInstalledApp){
+document.getElementById("downloadAppButton").style.display="none";
+}
+
+// वेबसाइट से APK डाउनलोड।
+function downloadApp(event){
+
+event.preventDefault();
+
+if(
+!APK_DOWNLOAD_URL ||
+APK_DOWNLOAD_URL === "PASTE_YOUR_APK_DOWNLOAD_LINK_HERE"
+){
+alert("APK डाउनलोड लिंक अभी जोड़ा नहीं गया है।");
+return;
+}
+
+window.location.href=APK_DOWNLOAD_URL;
+}
+
+
+/* =================================
+   QUIZ CATEGORIES
+================================= */
+
 const categories=[
 {id:"gk",name:"General Knowledge",icon:"🌍"},
 {id:"india",name:"India GK",icon:"🇮🇳"},
@@ -291,187 +463,311 @@ const categories=[
 {id:"nature",name:"Environment",icon:"🌱"}
 ];
 
+
+/* =================================
+   QUIZ QUESTIONS
+================================= */
+
 const questions=[
-{c:"gk",q:"दुनिया का सबसे बड़ा महासागर कौन सा है?",o:["अटलांटिक","हिंद","प्रशांत","आर्कटिक"],a:2},
-{c:"gk",q:"संयुक्त राष्ट्र संघ की स्थापना कब हुई?",o:["1945","1950","1939","1960"],a:0},
-{c:"india",q:"भारत की राजधानी क्या है?",o:["मुंबई","नई दिल्ली","कोलकाता","चेन्नई"],a:1},
-{c:"india",q:"भारत का राष्ट्रीय पशु कौन है?",o:["शेर","हाथी","बाघ","तेंदुआ"],a:2},
-{c:"india",q:"भारतीय संविधान कब लागू हुआ?",o:["1947","1950","1949","1952"],a:1},
-{c:"history",q:"ताजमहल किसने बनवाया?",o:["अकबर","शाहजहाँ","बाबर","हुमायूँ"],a:1},
-{c:"history",q:"भारत छोड़ो आंदोलन किस वर्ष शुरू हुआ?",o:["1930","1942","1919","1947"],a:1},
-{c:"science",q:"पानी का रासायनिक सूत्र क्या है?",o:["CO2","H2O","O2","NaCl"],a:1},
-{c:"science",q:"पौधे प्रकाश संश्लेषण में कौन सी गैस लेते हैं?",o:["ऑक्सीजन","नाइट्रोजन","कार्बन डाइऑक्साइड","हाइड्रोजन"],a:2},
-{c:"geography",q:"भारत की राजधानी क्या है?",o:["दिल्ली","पटना","मुंबई","जयपुर"],a:0},
-{c:"sports",q:"क्रिकेट टीम में कितने खिलाड़ी होते हैं?",o:["9","10","11","12"],a:2},
-{c:"sports",q:"ओलंपिक के प्रतीक में कितने छल्ले हैं?",o:["4","5","6","7"],a:1},
-{c:"constitution",q:"संविधान प्रारूप समिति के अध्यक्ष कौन थे?",o:["गांधीजी","डॉ. आंबेडकर","नेहरू","पटेल"],a:1},
-{c:"computer",q:"CPU का पूरा नाम क्या है?",o:["Central Processing Unit","Computer Personal Unit","Central Program Unit","Control Processing Unit"],a:0},
-{c:"nature",q:"ओजोन परत हमें किससे बचाती है?",o:["ध्वनि","UV किरणें","बारिश","हवा"],a:1}
+
+{c:"gk",q:"दुनिया का सबसे बड़ा महासागर कौन सा है?",
+o:["अटलांटिक","हिंद","प्रशांत","आर्कटिक"],a:2},
+
+{c:"gk",q:"संयुक्त राष्ट्र संघ की स्थापना कब हुई?",
+o:["1945","1950","1939","1960"],a:0},
+
+{c:"india",q:"भारत की राजधानी क्या है?",
+o:["मुंबई","नई दिल्ली","कोलकाता","चेन्नई"],a:1},
+
+{c:"india",q:"भारत का राष्ट्रीय पशु कौन है?",
+o:["शेर","हाथी","बाघ","तेंदुआ"],a:2},
+
+{c:"india",q:"भारतीय संविधान कब लागू हुआ?",
+o:["1947","1950","1949","1952"],a:1},
+
+{c:"history",q:"ताजमहल किसने बनवाया?",
+o:["अकबर","शाहजहाँ","बाबर","हुमायूँ"],a:1},
+
+{c:"history",q:"भारत छोड़ो आंदोलन किस वर्ष शुरू हुआ?",
+o:["1930","1942","1919","1947"],a:1},
+
+{c:"science",q:"पानी का रासायनिक सूत्र क्या है?",
+o:["CO2","H2O","O2","NaCl"],a:1},
+
+{c:"science",q:"पौधे प्रकाश संश्लेषण में कौन सी गैस लेते हैं?",
+o:["ऑक्सीजन","नाइट्रोजन","कार्बन डाइऑक्साइड","हाइड्रोजन"],a:2},
+
+{c:"geography",q:"भारत की राजधानी क्या है?",
+o:["दिल्ली","पटना","मुंबई","जयपुर"],a:0},
+
+{c:"sports",q:"क्रिकेट टीम में कितने खिलाड़ी होते हैं?",
+o:["9","10","11","12"],a:2},
+
+{c:"sports",q:"ओलंपिक के प्रतीक में कितने छल्ले हैं?",
+o:["4","5","6","7"],a:1},
+
+{c:"constitution",q:"संविधान प्रारूप समिति के अध्यक्ष कौन थे?",
+o:["गांधीजी","डॉ. आंबेडकर","नेहरू","पटेल"],a:1},
+
+{c:"computer",q:"CPU का पूरा नाम क्या है?",
+o:["Central Processing Unit","Computer Personal Unit","Central Program Unit","Control Processing Unit"],a:0},
+
+{c:"nature",q:"ओजोन परत हमें किससे बचाती है?",
+o:["ध्वनि","UV किरणें","बारिश","हवा"],a:1}
+
 ];
 
-let pool=[],index=0,score=0,answered=false,currentCategory="gk";
+
+/* =================================
+   QUIZ SYSTEM
+================================= */
+
+let pool=[];
+let index=0;
+let score=0;
+let answered=false;
+let currentCategory="gk";
+
 
 function showTab(id,button){
-document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+
+document.querySelectorAll(".section").forEach(s=>{
+s.classList.remove("active");
+});
+
 document.getElementById(id).classList.add("active");
-document.querySelectorAll("nav button").forEach(b=>b.classList.remove("active"));
+
+document.querySelectorAll("nav button").forEach(b=>{
+b.classList.remove("active");
+});
+
 if(button)button.classList.add("active");
+
 window.scrollTo(0,0);
+
 if(id==="saved")renderSaved();
+
 }
 
-document.getElementById("categories").innerHTML=categories.map(c=>`
+
+document.getElementById("categories").innerHTML=
+categories.map(c=>`
+
 <button class="category" onclick="startQuiz('${c.id}')">
+
 <span style="font-size:26px">${c.icon}</span>
+
 <b>${c.name}</b>
+
 <small>Play now</small>
-</button>`).join("");
+
+</button>
+
+`).join("");
+
 
 function startQuiz(cat){
+
 currentCategory=cat;
+
 pool=questions.filter(q=>q.c===cat);
-index=0;score=0;
+
+index=0;
+score=0;
+
 showTab("quiz");
+
 renderQuestion();
+
 }
+
 
 function renderQuestion(){
+
 answered=false;
-if(index>=pool.length){finishQuiz();return}
-let q=pool[index];
-document.getElementById("quizCategory").textContent=currentCategory;
-document.getElementById("questionText").textContent=q.q;
-document.getElementById("options").innerHTML=q.o.map((o,i)=>`
-<button class="option" onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${o}</button>`).join("");
-document.getElementById("feedback").textContent="";
-document.getElementById("scoreText").textContent="Score: "+score;
-document.getElementById("nextBtn").disabled=true;
-document.getElementById("progressBar").style.width=(index/pool.length*100)+"%";
+
+if(index>=pool.length){
+finishQuiz();
+return;
 }
+
+let q=pool[index];
+
+let category=categories.find(c=>c.id===currentCategory);
+
+document.getElementById("quizCategory").textContent=
+category?category.name:currentCategory;
+
+document.getElementById("questionText").textContent=q.q;
+
+document.getElementById("options").innerHTML=
+q.o.map((o,i)=>`
+
+<button class="option" onclick="chooseAnswer(${i})">
+
+${String.fromCharCode(65+i)}. ${o}
+
+</button>
+
+`).join("");
+
+document.getElementById("feedback").textContent="";
+
+document.getElementById("scoreText").textContent=
+"Score: "+score;
+
+document.getElementById("nextBtn").disabled=true;
+
+document.getElementById("progressBar").style.width=
+(index/pool.length*100)+"%";
+
+}
+
 
 function chooseAnswer(n){
+
 if(answered)return;
+
 answered=true;
+
 let q=pool[index];
+
 let buttons=document.querySelectorAll(".option");
+
 buttons.forEach((b,i)=>{
+
 b.disabled=true;
-if(i===q.a)b.classList.add("correct");
-else if(i===n)b.classList.add("wrong");
+
+if(i===q.a){
+b.classList.add("correct");
+}
+else if(i===n){
+b.classList.add("wrong");
+}
+
 });
+
 if(n===q.a){
+
 score++;
-document.getElementById("feedback").textContent="✓ बिल्कुल सही जवाब!";
+
+document.getElementById("feedback").textContent=
+"✓ बिल्कुल सही जवाब!";
+
 }else{
-document.getElementById("feedback").textContent="✗ सही जवाब: "+q.o[q.a];
+
+document.getElementById("feedback").textContent=
+"✗ सही जवाब: "+q.o[q.a];
+
 }
-document.getElementById("scoreText").textContent="Score: "+score;
+
+document.getElementById("scoreText").textContent=
+"Score: "+score;
+
 document.getElementById("nextBtn").disabled=false;
+
 }
+
 
 function nextQuestion(){
+
 index++;
+
 renderQuestion();
+
 }
+
 
 function finishQuiz(){
-document.getElementById("questionText").textContent="क्विज पूरा हुआ! आपका स्कोर: "+score+"/"+pool.length;
+
+document.getElementById("questionText").textContent=
+"क्विज पूरा हुआ! आपका स्कोर: "+score+"/"+pool.length;
+
 document.getElementById("options").innerHTML="";
-document.getElementById("feedback").textContent="बहुत अच्छा! फिर से खेलें।";
+
+document.getElementById("feedback").textContent=
+"बहुत अच्छा! फिर से खेलें।";
+
 document.getElementById("nextBtn").disabled=true;
+
 document.getElementById("progressBar").style.width="100%";
+
 }
+
+
+/* =================================
+   ASK QUESTION SYSTEM
+================================= */
 
 function submitQuestion(){
+
 let q=document.getElementById("userQuestion").value.trim();
-if(q.length<3){alert("सवाल लिखें");return}
-let list=JSON.parse(localStorage.qmiQuestions||"[]");
-list.unshift(q);
-localStorage.qmiQuestions=JSON.stringify(list);
-document.getElementById("userQuestion").value="";
-alert("सवाल सेव हो गया");
-renderSaved();
+
+if(q.length<3){
+alert("सवाल लिखें");
+return;
 }
+
+let list=JSON.parse(localStorage.qmiQuestions||"[]");
+
+list.unshift(q);
+
+localStorage.qmiQuestions=JSON.stringify(list);
+
+document.getElementById("userQuestion").value="";
+
+alert("सवाल सेव हो गया");
+
+renderSaved();
+
+}
+
+
+/* =================================
+   MY QUESTIONS
+================================= */
 
 function renderSaved(){
+
 let list=JSON.parse(localStorage.qmiQuestions||"[]");
-document.getElementById("savedList").innerHTML=list.length?
-list.map((q,i)=>`<p class="message">${i+1}. ${escapeHTML(q)}</p>`).join(""):"अभी कोई सवाल नहीं।";
+
+document.getElementById("savedList").innerHTML=
+
+list.length?
+
+list.map((q,i)=>`
+
+<p class="message">
+${i+1}. ${escapeHTML(q)}
+</p>
+
+`).join("")
+
+:"अभी कोई सवाल नहीं।";
+
 }
+
+
+/* =================================
+   SECURITY / TEXT DISPLAY
+================================= */
 
 function escapeHTML(s){
-return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-}
-</script>
 
-<!-- FIREBASE GUEST CHAT -->
-<script type="module">
-import {initializeApp} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
-import {
-getFirestore,collection,addDoc,query,orderBy,limit,onSnapshot,serverTimestamp
-} from "https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore.js";
+return String(s).replace(/[&<>"']/g,c=>({
 
-/* अपना Firebase Web App Config यहाँ डालें */
-const firebaseConfig={
-apiKey: "AIzaSyDpwptvNh9F3DypoZgZBwG-T1bgfqScJ8Y",
-  authDomain: "quiz-master-india-cad1b.firebaseapp.com",
-  projectId: "quiz-master-india-cad1b",
-  storageBucket: "quiz-master-india-cad1b.firebasestorage.app",
-  messagingSenderId: "754006559607",
-  appId: "1:754006559607:web:6ae1b4de109af556cc2f72",
-  measurementId: "G-RV0315QP60"
-};
+"&":"&amp;",
+"<":"&lt;",
+">":"&gt;",
+'"':"&quot;",
+"'":"&#39;"
 
-let db=null;
-const status=document.getElementById("chatStatus");
-const messages=document.getElementById("chatMessages");
+}[c]));
 
-try{
-if(firebaseConfig.apiKey!=="PASTE_FIREBASE_API_KEY"){
-const app=initializeApp(firebaseConfig);
-db=getFirestore(app);
-status.textContent="● Live Chat Connected";
-
-const q=query(collection(db,"publicChat"),orderBy("createdAt","desc"),limit(60));
-
-onSnapshot(q,snapshot=>{
-let arr=snapshot.docs.map(d=>d.data()).reverse();
-messages.innerHTML=arr.map(m=>`
-<div class="message">
-<b style="color:#78f0b2">${escapeHTML(m.name||"Guest")}</b>
-<p>${escapeHTML(m.text||"")}</p>
-</div>`).join("")||"अभी कोई मैसेज नहीं।";
-messages.scrollTop=messages.scrollHeight;
-},err=>{
-status.textContent="Chat rules error";
-console.error(err);
-});
-}
-}catch(e){
-status.textContent="Firebase configuration error";
-console.error(e);
 }
 
-window.sendChatMessage=async function(){
-if(!db){alert("पहले Firebase Config डालें");return}
-let name=document.getElementById("guestName").value.trim();
-let text=document.getElementById("chatInput").value.trim();
-if(name.length<2){alert("अपना नाम लिखें");return}
-if(!text){alert("मैसेज लिखें");return}
-if(text.length>500){alert("मैसेज बहुत लंबा है");return}
+renderSaved();
 
-try{
-await addDoc(collection(db,"publicChat"),{
-name:name.slice(0,24),
-text:text,
-createdAt:serverTimestamp()
-});
-document.getElementById("chatInput").value="";
-}catch(e){
-alert("मैसेज नहीं भेजा गया। Firestore Rules जाँचें।");
-console.error(e);
-}
-}
 </script>
 
 </body>
