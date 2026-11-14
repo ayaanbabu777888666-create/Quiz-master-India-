@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#06140f">
+<meta name="description" content="Quiz Master India - Play quizzes, test your knowledge and learn something new.">
+
 <title>Quiz Master India</title>
 
 <style>
@@ -97,18 +99,6 @@ margin:4px 2px;
 background:#173c2a;
 color:white;
 border:1px solid #326447;
-}
-
-.download-btn{
-display:inline-block;
-text-decoration:none;
-border:1px solid var(--light);
-padding:12px 17px;
-border-radius:12px;
-background:#d9ffe9;
-color:#064126;
-font-weight:bold;
-margin:8px 2px;
 }
 
 nav{
@@ -235,13 +225,6 @@ overflow-wrap:anywhere;
 margin:8px 0;
 }
 
-footer{
-text-align:center;
-padding:25px;
-color:#71917e;
-font-size:12px;
-}
-
 .notice{
 padding:12px;
 border-radius:12px;
@@ -251,10 +234,51 @@ font-size:12px;
 line-height:1.5;
 }
 
+/* ADVERTISEMENT AREA */
+
+.ad-container{
+width:100%;
+min-height:90px;
+margin:18px auto;
+padding:12px;
+background:#0b2118;
+border:1px dashed #326447;
+border-radius:12px;
+text-align:center;
+overflow:hidden;
+}
+
+.ad-label{
+color:#71917e;
+font-size:10px;
+letter-spacing:1px;
+margin-bottom:8px;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#71917e;
+font-size:12px;
+}
+
 @media(min-width:650px){
 .grid{grid-template-columns:repeat(3,1fr)}
 }
 </style>
+
+<!--
+GOOGLE ADSENSE SETUP
+
+After AdSense approval, replace the placeholder publisher ID
+with your real publisher ID.
+
+Example format:
+ca-pub-1234567890123456
+
+Do not use a fake publisher ID.
+-->
+
 </head>
 
 <body>
@@ -289,16 +313,13 @@ line-height:1.5;
 Ask Question
 </button>
 
-<!-- WEBSITE ONLY DOWNLOAD BUTTON -->
-<a
-id="downloadAppButton"
-class="download-btn"
-href="#"
-onclick="downloadApp(event)">
-⬇ Download App
-</a>
-
 </section>
+
+<!-- ADVERTISEMENT 1 -->
+<div class="ad-container">
+<div class="ad-label">ADVERTISEMENT</div>
+<!-- Approved AdSense ad code will go here -->
+</div>
 
 <nav>
 <button class="active" onclick="showTab('home',this)">Home</button>
@@ -352,6 +373,13 @@ Next Question
 </button>
 
 </div>
+
+<!-- ADVERTISEMENT 2 -->
+<div class="ad-container">
+<div class="ad-label">ADVERTISEMENT</div>
+<!-- Approved AdSense ad code will go here -->
+</div>
+
 </section>
 
 <section id="ask" class="section">
@@ -386,6 +414,12 @@ AI जवाब की सुविधा अभी शामिल नहीं
 
 </div>
 
+<!-- ADVERTISEMENT 3 -->
+<div class="ad-container">
+<div class="ad-label">ADVERTISEMENT</div>
+<!-- Approved AdSense ad code will go here -->
+</div>
+
 </section>
 
 <section id="saved" class="section">
@@ -402,50 +436,13 @@ AI जवाब की सुविधा अभी शामिल नहीं
 
 <footer>
 Quiz Master India © 2026
+<br><br>
+<a href="privacy.html" style="color:#78f0b2">Privacy Policy</a>
 </footer>
 
 </div>
 
 <script>
-
-/* =================================
-   APP DOWNLOAD SETTINGS
-================================= */
-
-// यहाँ अपनी APK की असली डाउनलोड लिंक डालें।
-const APK_DOWNLOAD_URL = "PASTE_YOUR_APK_DOWNLOAD_LINK_HERE";
-
-// ऐप और वेबसाइट की पहचान।
-const params = new URLSearchParams(window.location.search);
-
-const isInstalledApp =
-params.get("app") === "1" ||
-window.matchMedia("(display-mode: standalone)").matches ||
-navigator.standalone === true ||
-window.AndroidApp === true ||
-/; wv\)/i.test(navigator.userAgent);
-
-// ऐप के अंदर Download बटन छिपाएँ।
-if(isInstalledApp){
-document.getElementById("downloadAppButton").style.display="none";
-}
-
-// वेबसाइट से APK डाउनलोड।
-function downloadApp(event){
-
-event.preventDefault();
-
-if(
-!APK_DOWNLOAD_URL ||
-APK_DOWNLOAD_URL === "PASTE_YOUR_APK_DOWNLOAD_LINK_HERE"
-){
-alert("APK डाउनलोड लिंक अभी जोड़ा नहीं गया है।");
-return;
-}
-
-window.location.href=APK_DOWNLOAD_URL;
-}
-
 
 /* =================================
    QUIZ CATEGORIES
